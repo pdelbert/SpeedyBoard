@@ -1,24 +1,12 @@
-import React from 'react';
 import './App.css';
-//import SongsView from './presentation/songs/SongsView';
-import { ChampionIcon, SaveMoneyDollarIcon, Timer02Icon } from "hugeicons-react";
-import BarChartCustom from './components/BarChart';
+import { SaveMoneyDollarIcon, Timer02Icon } from "hugeicons-react";
 import PieChartCustom from './components/PieChart';
 import TableCustom from './components/Table';
 
 import ChartCards from './components/ChartCards';
-import { TITLE_BARCHART, TITLE_PIECHART } from './constants';
+import { TITLE_PIECHART } from './constants';
 import { ActivelUsers, TotalUsers, UserGrowthBarChart } from './presentation/users/UsersView';
 import { BarChart, TotalStreams } from './presentation/songs/SongsView';
-
-// Total Users: The total number of registered users on the platform.
-//Active Users: The number of users who have streamed at least one song in the last 30 days.
-//Total Streams: The total number of song streams on the platform.
-
-
-// Line Chart
-// Pie Chart
-// Bar Chart
 
 function App() {
   return (
