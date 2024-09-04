@@ -10,6 +10,13 @@ export const TITLE_LINECHART = "User Growth";
 export const TITLE_PIECHART = "Revenue Distribution";
 export const TITLE_BARCHART = "Top 5 Streamed Songs";
 
+export const NO_VIEW = "NO VIEW";
+
+export const THOUSANDS = 1000000;
+export const MILLIONS = 1000000;
+export const BILLIONS = 1000000000;
+
+
 export const TABLE_HEADER = {
     SONG_NAME: "Song Name",
     ARTIST: "Artist",
