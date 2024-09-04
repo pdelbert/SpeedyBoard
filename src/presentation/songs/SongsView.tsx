@@ -1,9 +1,11 @@
 import CardCustom from '../../components/Cards';
-import { getMostStreamedSong, getTotalStreams } from './SongsContainer';
+import { getMostStreamedSong, getRecentStreams, getTotalStreams } from './SongsContainer';
 import { TITLE_BARCHART, TOTAL_STREAMS } from '../../constants';
 import { ChampionIcon, Vynil02Icon } from 'hugeicons-react';
 import ChartCards from '../../components/ChartCards';
 import BarChartCustom from '../../components/BarChart';
+import TableCustom from '../../components/Table';
+import { Songs } from '../../domain/songs';
 
 
 export const TotalStreams = () => {
@@ -27,4 +29,9 @@ export const BarChart = () => {
             chart={<BarChartCustom dataSet={dataSet} series={series} />}
         />
     </>
+}
+
+export const TableCard = () => {
+    const data: Songs[] = getRecentStreams();
+    return <TableCustom dataset={data} />
 }

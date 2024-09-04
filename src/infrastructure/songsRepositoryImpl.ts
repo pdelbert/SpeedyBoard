@@ -2,7 +2,7 @@ import mockSongs from "../mock/songsMock";
 import { currentDate, daysBetween } from "../utils/date";
 
 import { DATE_TIME_FORMAT, LIMIT_STREMS_DAYS } from "../constants";
-import { BarChartProps, SongsRepository } from "../domain/songs";
+import { BarChartProps, Songs, SongsRepository } from "../domain/songs";
 
 
 const SongsRepositoryImpl = ():SongsRepository => ({
@@ -27,6 +27,9 @@ const SongsRepositoryImpl = ():SongsRepository => ({
         const series = Array.from(result.values())
         
         return { dataSet: dataSet, series: series};           
+    },
+    getRecentStreams:():Songs[] => {
+        return mockSongs;
     }
 
 });

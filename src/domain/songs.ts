@@ -12,8 +12,13 @@ export interface BarChartProps {
     series: (number | null)[]
 }
 
+export interface TableProps {
+    dataset: Songs[]
+}
+
 export interface SongsRepository {
     getTotalStreamedSongs(): number
     getMostStremedArtis(): number
     getMostStreamedSong(): BarChartProps
+    getRecentStreams():Songs[]
 }

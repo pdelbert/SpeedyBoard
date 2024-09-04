@@ -1,5 +1,5 @@
 import songsUseCase from '../../useCase/songsUseCase'
-import { BarChartProps } from '../../domain/songs';
+import { BarChartProps, Songs } from '../../domain/songs';
 
 export const getTotalStreams = (): number => {
     const { getTotalStreamedSongs } = songsUseCase();
@@ -9,5 +9,10 @@ export const getTotalStreams = (): number => {
 export const getMostStreamedSong = (): BarChartProps => {
     const { getMostStreamedSong } = songsUseCase();
     return getMostStreamedSong();
+}
+
+export const getRecentStreams = (): Songs[] => {
+    const { getRecentStreams } = songsUseCase();
+    return getRecentStreams();
 }
 

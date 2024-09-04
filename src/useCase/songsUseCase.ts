@@ -17,6 +17,11 @@ const songsUseCase =():SongsRepository => ({
     getMostStreamedSong :() => {
         const { getMostStreamedSong } = SongsRepositoryImpl();
         return getMostStreamedSong();
+    },
+
+    getRecentStreams: () => {
+        const { getRecentStreams } = SongsRepositoryImpl();
+        return getRecentStreams();
     }
 });
 
