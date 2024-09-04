@@ -1,6 +1,24 @@
 import { Timer02Icon } from "hugeicons-react";
 import { RECENT_STREAS, TABLE_HEADER } from "../constants";
 import { TableProps } from "../domain/songs";
+import { kFormatter } from "../utils/formatter";
+
+const RenderTableBody = ({ dataset }: TableProps) => {
+    const tablebody = dataset.map((item, index) => {
+        const formatCount = kFormatter(item.stream_count);
+
+        return (
+            <tr key={index}>
+                <th>{item.title}</th>
+                <td>{item.artist}</td>
+                <td>{item.last_stream}</td>
+                <td className="font-extrabold text-md">{formatCount}</td>
+            </tr>
+        )
+    });
+
+    return tablebody;
+}
 
 
 const TableCustom = ({ dataset }: TableProps) => {
@@ -28,16 +46,7 @@ const TableCustom = ({ dataset }: TableProps) => {
                             </thead>
 
                             <tbody>
-                                {
-                                    dataset.map((item, index) => (
-                                        <tr key={index}>
-                                            <th>{item.title}</th>
-                                            <td>{item.artist}</td>
-                                            <td>{item.last_stream}</td>
-                                            <td>{item.stream_count}</td>
-                                        </tr>
-                                    ))
-                                }
+                                <RenderTableBody dataset={dataset} />
                             </tbody>
                         </table>
                     </div>
