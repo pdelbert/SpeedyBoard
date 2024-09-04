@@ -6,6 +6,7 @@ export interface Songs {
     year: string
     stream_count: number
     last_stream: string
+    avatar: string
 }
 export interface BarChartProps {
     dataSet: string[]
