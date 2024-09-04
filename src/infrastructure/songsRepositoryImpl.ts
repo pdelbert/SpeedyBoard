@@ -22,7 +22,7 @@ const SongsRepositoryImpl = ():SongsRepository => ({
             .filter((item, _) => daysBetween(item.last_stream, currentDate(DATE_TIME_FORMAT)) <= LIMIT_STREMS_DAYS)
             .map((item, _) => item.title);
 
-        const dataSet = [...new Set(topArtist)];
+        const dataSet = Array.from(new Set(topArtist));
         const result = topArtist.reduce((a, c) => a.set(c, (a.get(c) || 0) + 1), new Map());
         const series = Array.from(result.values())
         
