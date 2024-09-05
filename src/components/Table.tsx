@@ -12,11 +12,10 @@ const RenderTableBody = ({ dataset }: TableProps) => {
                 <th className="flex flex-row items-center">
                     <div className="avatar mr-3">
                         <div className="w-14 rounded-full border-2 border-green-600">
-                            <img src={item.avatar} />
+                            <img src={item.avatar} alt="avatar" />
                         </div>
                     </div>
                     <div>{item.title}</div>
-
                 </th>
                 <td>{item.artist}</td>
                 <td>{item.last_stream}</td>
@@ -25,7 +24,7 @@ const RenderTableBody = ({ dataset }: TableProps) => {
         )
     });
 
-    return tablebody;
+    return <>{tablebody}</>
 }
 
 
