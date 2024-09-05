@@ -18,8 +18,15 @@ export interface TableProps {
 }
 
 export interface SongsRepository {
-    getTotalStreamedSongs(): number
-    getMostStremedArtis(): number
+    getTotalStreamedSongs():  Songs[]
+    getMostStremedArtis():  Songs[]
+    getMostStreamedSong(): Songs[]
+    getRecentStreams():Songs[]
+}
+
+export interface ISongsRepositoryImpl {
+    getTotalStreamedSongs():  number
+    getMostStremedArtis():  number
     getMostStreamedSong(): BarChartProps
     getRecentStreams():Songs[]
 }
