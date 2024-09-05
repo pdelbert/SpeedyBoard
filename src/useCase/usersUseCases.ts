@@ -1,5 +1,5 @@
 import { DatasetElementType } from "@mui/x-charts/internals";
-import { DATE_TIME_FORMAT, LIMIT_STREMS_DAYS } from "../constants";
+import { DATE_TIME_FORMAT, LIMIT_STREMS_DAYS, MONTHS_MMM_FORMAT } from "../constants";
 import { IUserRepositoryImpl } from "../domain/users";
 import UserRepositoryImpl from "../infrastructure/userRepositoryImpl";
 import { currentDate, daysBetween, getLastMonths, isSameMonth } from "../utils/date";
@@ -28,8 +28,8 @@ const usersUseCase = ():IUserRepositoryImpl => ({
         let totalUsersCount = 0;
         let activeUsersCount = 0;
 
-        const lastMonths = getLastMonths(12, 'MMM');
-        const lastMonthsFormatted = getLastMonths(12, 'YYYY-MM-DD');
+        const lastMonths = getLastMonths(12, MONTHS_MMM_FORMAT);
+        const lastMonthsFormatted = getLastMonths(12, DATE_TIME_FORMAT);
         
 
         const data: DatasetElementType<string | number | Date | null | undefined>[] = lastMonths.map((month, index) => {

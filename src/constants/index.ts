@@ -1,4 +1,5 @@
-export const DATE_TIME_FORMAT = 'YYYY-MM-DD'; 
+export const DATE_TIME_FORMAT = 'YYYY-MM-DD';
+export const MONTHS_MMM_FORMAT = 'MMM';
 export const LIMIT_STREMS_DAYS = 30;
 
 export const TOTAL_USERS = "Total Users";
