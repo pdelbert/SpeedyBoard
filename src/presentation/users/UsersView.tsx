@@ -1,4 +1,3 @@
-import React from 'react'
 import CardCustom from '../../components/Cards'
 import { ACTIVE_USERS, TITLE_LINECHART, TOTAL_USERS } from '../../constants'
 import { Activity02Icon, ChartBarLineIcon, UserAccountIcon } from 'hugeicons-react'

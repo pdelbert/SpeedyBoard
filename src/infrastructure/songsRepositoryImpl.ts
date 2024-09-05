@@ -4,15 +4,15 @@ import { Songs, SongsRepository } from "../domain/songs";
 
 const SongsRepositoryImpl = ():SongsRepository => ({
     
-    getTotalStreamedSongs:(): Songs[] => {
+    getTotalStreamedSongs:():Songs[] => {
         return mockSongs;
     },
 
-    getMostStremedArtis:(): Songs[] => {
+    getMostStremedArtis:():Songs[] => {
         return mockSongs;
     },
 
-    getMostStreamedSong:(): Songs[] => {
+    getMostStreamedSong:():Songs[] => {
         return mockSongs;    
     },
 

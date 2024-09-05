@@ -10,13 +10,13 @@ export interface Users {
 }
 
 export interface UserRepository {
-    getRegisteredUsers(): Users[]
-    getActiveUsers(): Users[]
-    getUserGrowth(): Users[]
+    getRegisteredUsers():Users[]
+    getActiveUsers():Users[]
+    getUserGrowth():Users[]
 }
 
 export interface IUserRepositoryImpl {
-    getRegisteredUsers(): number
-    getActiveUsers(): number
-    getUserGrowth(): DatasetElementType<string | number | Date | null | undefined>[]
+    getRegisteredUsers():number
+    getActiveUsers():number
+    getUserGrowth():DatasetElementType<string | number | Date | null | undefined>[]
 }

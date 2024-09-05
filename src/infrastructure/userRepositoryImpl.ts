@@ -4,15 +4,15 @@ import { UserRepository, Users } from "../domain/users"
 
 const UserRepositoryImpl = ():UserRepository => ({
     
-    getRegisteredUsers :(): Users[] => {
+    getRegisteredUsers:():Users[] => {
         return usersMock;
     },
     
-    getActiveUsers :(): Users[] => {
+    getActiveUsers:():Users[] => {
         return usersMock;
     },
 
-    getUserGrowth :():Users[] => {
+    getUserGrowth:():Users[] => {
         return usersMock;
     }
 });

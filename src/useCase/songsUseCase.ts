@@ -1,19 +1,19 @@
 import { DATE_TIME_FORMAT, LIMIT_STREMS_DAYS } from "../constants";
-import { ISongsRepositoryImpl, BarChartProps } from "../domain/songs";
+import { ISongsRepositoryImpl, BarChartProps, Songs } from "../domain/songs";
 import SongsRepositoryImpl from "../infrastructure/songsRepositoryImpl";
 import { currentDate, daysBetween } from "../utils/date";
 
 
 const songsUseCase =():ISongsRepositoryImpl => ({
 
-    getTotalStreamedSongs :():number => {
+    getTotalStreamedSongs:():number => {
         const { getTotalStreamedSongs } = SongsRepositoryImpl();
         const mockSongs = getTotalStreamedSongs();
         
         return mockSongs.filter((item, _) => item.stream_count > 0).length;
     },
 
-    getMostStremedArtis :():number => {
+    getMostStremedArtis:():number => {
         const { getMostStremedArtis } = SongsRepositoryImpl();
         const mockSongs = getMostStremedArtis();
         const topArtist = mockSongs.filter((item, _) =>  daysBetween(item.last_stream, currentDate(DATE_TIME_FORMAT)) > LIMIT_STREMS_DAYS);
@@ -21,7 +21,7 @@ const songsUseCase =():ISongsRepositoryImpl => ({
         return Math.max(...topArtist.map((item, _) => item.stream_count));
     },
 
-    getMostStreamedSong :(): BarChartProps => {
+    getMostStreamedSong:():BarChartProps => {
         const { getMostStreamedSong } = SongsRepositoryImpl();
         const mockSongs = getMostStreamedSong();
 
@@ -37,7 +37,7 @@ const songsUseCase =():ISongsRepositoryImpl => ({
         return { dataSet: dataSet, series: series};
     },
 
-    getRecentStreams: () => {
+    getRecentStreams:():Songs[] => {
         const { getRecentStreams } = SongsRepositoryImpl();
         return getRecentStreams();
     }

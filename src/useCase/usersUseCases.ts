@@ -6,13 +6,13 @@ import { currentDate, daysBetween, getLastMonths, isSameMonth } from "../utils/d
 
 const usersUseCase = ():IUserRepositoryImpl => ({
     
-    getRegisteredUsers: () => {
+    getRegisteredUsers:():number => {
         const  { getRegisteredUsers } = UserRepositoryImpl();
         const usersMock = getRegisteredUsers();
         return usersMock.filter((item, _) => item.registered === true).length;
     },
 
-    getActiveUsers: () => {
+    getActiveUsers:():number => {
         const  { getActiveUsers } = UserRepositoryImpl();
         const usersMock = getActiveUsers();
 
@@ -21,7 +21,7 @@ const usersUseCase = ():IUserRepositoryImpl => ({
 
     },
 
-    getUserGrowth: () => {
+    getUserGrowth:():DatasetElementType<string | number | Date | null | undefined>[] => {
         const  { getUserGrowth } = UserRepositoryImpl();
         const usersMock = getUserGrowth();
 
