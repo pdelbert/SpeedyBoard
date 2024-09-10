@@ -1,9 +1,7 @@
-import CardCustom from '../../components/Cards'
-import { ACTIVE_USERS, TITLE_LINECHART, TOTAL_USERS } from '../../constants'
 import { Activity02Icon, ChartBarLineIcon, UserAccountIcon } from 'hugeicons-react'
+import { ACTIVE_USERS, TITLE_LINECHART, TOTAL_USERS } from '../../constants'
 import { getActivelUsers, getTotalUsers, getUserGrowth } from './UsersContainer'
-import ChartCards from '../../components/ChartCards'
-import LineChartCustom from '../../components/LineChart'
+import { LineChartCustom, ChartCards, CardCustom } from '../../components/'
 
 export const TotalUsers = () => {
     const data = getTotalUsers();

@@ -1,12 +1,9 @@
-import CardCustom from '../../components/Cards';
-import { getMostStreamedSong, getRecentStreams, getTotalStreams } from './SongsContainer';
-import { TITLE_BARCHART, TOTAL_STREAMS } from '../../constants';
-import { ChampionIcon, Vynil02Icon } from 'hugeicons-react';
-import ChartCards from '../../components/ChartCards';
-import BarChartCustom from '../../components/BarChart';
-import TableCustom from '../../components/Table';
-import { Songs } from '../../domain/songs';
 
+import { ChampionIcon, Vynil02Icon } from 'hugeicons-react';
+import { Songs } from '../../domain/songs';
+import { TITLE_BARCHART, TOTAL_STREAMS } from '../../constants';
+import { getMostStreamedSong, getRecentStreams, getTotalStreams } from './SongsContainer';
+import { CardCustom, ChartCards, BarChartCustom, TableCustom } from '../../components/';
 
 export const TotalStreams = () => {
     const data = getTotalStreams();
